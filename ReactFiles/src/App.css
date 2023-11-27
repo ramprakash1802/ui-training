@@ -1,0 +1,18 @@
+.App {
+  text-align: center;
+}
+
+.flex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.flex div {
+  margin: 1rem;
+}
+
+.input {
+  margin: 2rem;
+}

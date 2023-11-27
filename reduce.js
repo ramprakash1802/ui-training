@@ -1,4 +1,4 @@
-const text = "This is a sample text. It is a sample text for demonstration purposes.";
+const text = "This is a sample text. It is a sample text.";
 const words = text.split(" ");
 
 const wordCount = words.reduce((accumulator, word) => {
