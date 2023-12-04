@@ -11,7 +11,6 @@ function RefExample() {
     <div className="input">
       <input type="text" ref={inputElement} />
       <button onClick={changeColor}>Focus Input</button>
-      {console.log('Hi')}
     </div>
   );
 }
