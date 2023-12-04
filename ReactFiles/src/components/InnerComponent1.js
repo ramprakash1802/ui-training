@@ -1,5 +1,5 @@
 import React, { useContext  } from "react";
-import { TextContext } from './Context';
+import { TextContext } from '../Context';
 
 function InnerComponent1() {
 

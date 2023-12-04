@@ -1,7 +1,9 @@
 import React, { useState, useMemo, useCallback, useEffect } from 'react';
-import RefExample from './useRef';
+import { useSelector } from "react-redux";
+
+import RefExample from './components/useRef';
 import './App.css';
-import Counter from './useReducer';
+import Counter from './components/useReducer';
 import TextContext from './Context';
 
 
@@ -13,12 +15,14 @@ const calculateFactorial = num => {
   return result;
 };
 
-const innerText = "This is to demonstrate useContext Hook";
-
 const App = () => {
   const [number, setNumber] = useState(1);
 
   const factorial = useMemo(() => calculateFactorial(number), [number]);
+
+
+  const text = useSelector(state => state.inputText);
+
 
   const handleClick = useCallback(() => {
     setNumber((prevNumber) => prevNumber + 1);
@@ -29,11 +33,12 @@ const App = () => {
   }, [number]); // Run the effect when 'number' changes
 
   return (
-    <TextContext.Provider value={innerText}>
+    <TextContext.Provider value={text}>
       <div className='flex'>
         <h2>Factorial of {number} is: {factorial}</h2>
         <button onClick={handleClick}>Increment Number</button>
         <Counter />
+        <RefExample />
       </div>
     </TextContext.Provider>
   );
