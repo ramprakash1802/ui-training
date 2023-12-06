@@ -13,6 +13,18 @@
   margin: 1rem;
 }
 
+.counter {
+  margin-left: 8rem;
+}
+
 .input {
   margin: 2rem;
+}
+
+.buttons button{
+  margin: 0.5rem;
+}
+
+.remove_button {
+  margin-left: 5px;
 }

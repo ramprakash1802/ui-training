@@ -1,10 +1,11 @@
 import React, { useState, useMemo, useCallback, useEffect } from 'react';
 import { useSelector } from "react-redux";
 
-import RefExample from './components/useRef';
 import './App.css';
-import Counter from './components/useReducer';
+import Counter from './components/Counter';
 import TextContext from './Context';
+import Button from './atoms/Button/Button';
+import TextChanger from './components/TextChanger';
 
 
 const calculateFactorial = num => {
@@ -36,9 +37,9 @@ const App = () => {
     <TextContext.Provider value={text}>
       <div className='flex'>
         <h2>Factorial of {number} is: {factorial}</h2>
-        <button onClick={handleClick}>Increment Number</button>
+        <Button buttonType='primary' onClick={handleClick} content='Increment Number'/>
         <Counter />
-        <RefExample />
+        <TextChanger />
       </div>
     </TextContext.Provider>
   );
