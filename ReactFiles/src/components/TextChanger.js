@@ -29,7 +29,11 @@ function TextChanger() {
     <div className="input">
       <input type="text" value={text} onChange={handleChange}/>
       <Button onClick={handleClick} content='Change Text' />
-      <Button className='remove_button' buttonType='secondary' onClick={hanldeRemove} content='Remove Text'/>
+      <Button
+       className='remove_button'
+       buttonType='secondary' 
+       onClick={hanldeRemove} 
+       content='Remove Text'/>
     </div>
   );
 }
