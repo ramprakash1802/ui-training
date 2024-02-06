@@ -6,6 +6,7 @@ import Counter from './components/Counter';
 import TextContext from './Context';
 import Button from './atoms/Button/Button';
 import TextChanger from './components/TextChanger';
+import BarGraph from './components/BarChart';
 
 
 const calculateFactorial = num => {
@@ -40,6 +41,7 @@ const App = () => {
         <Button buttonType='primary' onClick={handleClick} content='Increment Number'/>
         <Counter />
         <TextChanger />
+        <BarGraph/>
       </div>
     </TextContext.Provider>
   );
