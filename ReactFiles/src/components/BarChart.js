@@ -24,7 +24,8 @@ const BarGraph = () => {
       min: 0,
       title: {
         text: 'Sales'
-      }
+      },
+      softMin: -9000,
     },  
     navigation: {
       buttonOptions: {
@@ -39,7 +40,7 @@ const BarGraph = () => {
       visible: salesVisible,
     }, {
       name: 'Cost',
-      data: [1000, 1200, 9000, 1500, 1800, 2000, 2200, 2500, 2100, 1900, 1800, 1600],
+      data: [1000, 1200, -9000, 1500, 1800, 2000, 2200, 2500, 2100, 1900, 1800, 1600],
       visible: costVisible
     }],
     plotOptions: {
